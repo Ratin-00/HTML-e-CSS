@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
     <style>
+        body{
+            background-image: url('Imagens/pattern002.png');
+            background-size: 40px 40px;
+            /*no atributo background-size, também é possível ajustar o "tiling" da imagem, inserindo os valores de x e y respectivamente.*/
+        }
+        /*para posicionamento na página, isto é no documento principal, é possível estabelecer uma medida de referência à viewport (janela), através de um percentual de tamanho da mesma. Veja o exemplo: 
+        body{
+            height: 98vh; <- vh significa "view height", ou seja, a altura do body será 98% o tamanho da janela.
+        }
+        Esse tipo de atribução é importante para elementos como o body pois este tem suas dimensões, principalmente de altura, ajustada ao conteúdo que está na página automaticamente. Dessa maneira, se tiver apenas um elemento que seja muito pequeno ou ainda, que seja do tipo inline, a altura do body será mínima. Portanto, utilizamos o vh nessas ocasiões.*/
         div.quad{
             border: 1px solid black;
             width: 300px;
@@ -26,10 +36,34 @@
             background-size: contain;
         }
         div#q4{
-            background-image: url('Imagens/wallpaper002.jpg');
-            background-size: cover;
+            background-image: url('Imagens/pattern002.png');
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-position: 20px 20px;
+            /*background-position determina o deslocamento da imagem de fundo, seguindo o valor de x e y respectivamente.*/
         }
         /*Sobre o atributo background-size (contain e cover): contain - estica uma imagem menor para que ela se ajuste ao espaço onde é inserida. cover - comprime uma imagem maior para que ela se ajuste ao espaço onde é inserida.*/
+        div#q5{
+            background-image: url('Imagens/wallpaper003.jpg');
+            background-size: cover;
+            background-position: center center;
+        }
+        div#q6{
+            background-image: url('Imagens/wallpaper003.jpg');
+            background-position: left top;
+        }
+        div#q7{
+            background-image: url('Imagens/wallpaper003.jpg');
+            background-position: center top;
+        }
+        div#q8{
+            background-image: url('Imagens/wallpaper003.jpg');
+            background-position: center left;
+        }
+        div#q9{
+            background-image: url('Imagens/wallpaper003.jpg');
+            background-position: center right;
+        }
     </style>
     <title>Teste de Imagem de Fundo</title>
 </head>
@@ -44,6 +78,21 @@
 
     </div>
     <div class="quad" id="q4">
+
+    </div>
+    <div class="quad" id="q5">
+
+    </div>
+    <div class="quad" id="q6">
+
+    </div>
+    <div class="quad" id="q7">
+
+    </div>
+    <div class="quad" id="q8">
+
+    </div>
+    <div class="quad" id="q9">
 
     </div>
 </body>
