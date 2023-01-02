@@ -8,18 +8,42 @@
     <style>
         div.quad{
             border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+            border-radius: 10px;
+            background-color: cadetblue;
         }
+        div#q1{
+            background-color: rgb(97, 32, 219);
+        }
+        div#q2{
+            background-image: linear-gradient(to bottom, rgb(0, 255, 21), rgb(7, 61, 23));
+        }
+        div#q3{
+            background-image: url('Imagens/pattern001.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        div#q4{
+            background-image: url('Imagens/wallpaper002.jpg');
+            background-size: cover;
+        }
+        /*Sobre o atributo background-size (contain e cover): contain - estica uma imagem menor para que ela se ajuste ao espaço onde é inserida. cover - comprime uma imagem maior para que ela se ajuste ao espaço onde é inserida.*/
     </style>
     <title>Teste de Imagem de Fundo</title>
 </head>
 <body>
-    <div class="quad">
+    <div class="quad" id="q1">
 
     </div>
-    <div class="quad">
+    <div class="quad" id="q2">
 
     </div>
-    <div class="quad">
+    <div class="quad" id="q3">
+
+    </div>
+    <div class="quad" id="q4">
 
     </div>
 </body>
