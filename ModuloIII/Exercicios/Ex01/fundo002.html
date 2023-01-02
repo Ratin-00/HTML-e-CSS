@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <style>
+        #contn{
+            position: relative;/*todo posicionamento de um box em HTML é relativo por padrão*/
+            height: 92vh;
+            background-color: rgb(222, 184, 135);
+            background-image: url('Imagens/target001.png');
+            background-size: 100% 100%;
+            padding: 20px;
+        }
+        #conte{
+            height: 200px;
+            background-color: rgba(255, 127, 80, 0.603);
+            background-image: url('Imagens/target001.png');
+            background-size: 100% 100%;
+            width: 400px;
+            /*margin: auto;*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /*top e left são atributos próprios de position: absolute.*/
+            transform: translate(-50%, -50%);
+            /*Por padrão, o pivô dos elementos é o vértice do canto superior esquerdo. Quando especificado os valores top e left 50%, para levar o conteúdo ao centro, o que foi considerado foi o pivô, ou seja, foi ele que foi levado ao centro do container. Sendo assim, a forma de se centralizar os elementos em posição absoluta é utilizando o atributo transform com a função translate (transladar), que permite ajustar o deslocamento do conteúdo sobre os eixos do container. Os valores desses eixos seguem as coorenadas cartesinas, ou seja, no eixo x, positivo é do centro para a direita, e negativo do centro para a esquerda. Já para o eixo y, positivo é do centro para a cima, e negativo do centro para a baixo.*/
+        }
+    </style>
+    <title>Alinhamento vertical</title>
+</head>
+<body>
+    <!--para alinhamento vertical, é necessário que haja um elemento container e um conteúdo.-->
+    <section id="contn">
+        <article id="conte">
+        
+        </article>
+    </section>
+</body>
+</html>
