@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+:root{
+    /*pseudoclasse que representa a raiz de todo o document. Ela é responsável por definir parâmetros, atributos ou variáveis comuns a todo o documento.*/
+    /*Abaixo, alguns exemplos de declaração de variáveis em css*/
+    --lghtClrPMax: #95E698;
+    --lghtClrPlus: #4EE052;
+    --lghtClr: #3DAD40;
+    --mdnClr: #226124;
+    --drkClr: #226124;
+    --smthGdl: rgba(61, 173, 65, 0.5);
+    --smthGddk: rgba(78, 224, 83, 0.26);
+
+    --fntMn: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+    --fntHd: 'etrocket', 'Calibri', sans-serif;
+}
+/*Sempre considere colocar os elementos em ordem (do topo à parte inferior do documento) para facilitar a localização de cada um, e facilitar a visualização da hierarquia. Isso também facilita a visualização de possíveis atributos ou até mesmo elementos redundantes que podem tornar a css mais longa e pesada, de modo a tornar mais fácil de eliminá-las.*/
+@font-face{
+    font-family: 'idroid';
+    src: url('../pacote-projeto-d010/fontes/idroid.otf')format('opentype');
+    /*Conceitos importantes: quando definimos qualquer caminho para se alcançar um arquivo para a url que esteja em uma pasta anterior, colocamos "../", que significa "voltar a pasta anterior a atual e...". Já quando se coloca "./" significa "nesta mesma pasta, selecione...".*/
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face{
+    font-family: 'etrocket';
+    src: url('../pacote-projeto-d010/fontes/ET Rocketype-FontZillion/Fonts/etrocket.ttf')format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+body{
+    margin:0px;
+    background-color: var(--lghtClrPlus);
+}
+header{
+    background-image: linear-gradient(var(--lghtClr), var(--mdnClr));
+    object-fit: fill;
+    padding:20px 0px 5px 0px;
+    min-height: 150px;
+    /*width: 100%;*/
+    text-align: center;
+    background-color: var(--drkClr);
+    text-shadow: 2px 2px 0px black;
+}/*Para maior coerência e para facilitar a leitura e organização da css, sempre considere a hierarquia dos elementos, passando atributos globais para elementos pai para os filhos.*/
+h1{
+    /*margin-top: 0px;*/
+    font-family: var(--fntHd);
+    font-size: 1.5em;
+    color: white;
+}
+header > p{
+    color: white;
+    font-size: 1.2em;
+    max-width: 400px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+menu{
+    padding: 10px 25px;
+    margin-top: 2px;
+    background-color: var(--drkClr);
+    box-shadow: 3px 3px 10px black;
+    /*max-width: 1280px;*/
+}
+a.botn{
+    /*margin-right: 15px;*/
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-family: var(--fntMn);
+    transition-duration: .5s;/*esse atributo serve para cronometrar animações em css*/
+}
+a.botn:hover{
+    color: var(--lghtClrPMax);
+    background-color: var(--lghtClr);
+    border-radius: 5px;
+}
+main{
+    background-color: white;
+    margin: auto;
+    font-family: var(--fntMn);
+    padding: 5px 20px 40px 20px;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.623);
+    /*min-width: 100px;*/
+    max-width: 900px;
+    text-align: justify;
+}
+main p{/*quando um elemento está contido dentro de alguma camada de outro elemento e que não seja filho direto deste elemento, não se utiliza o ">", coloque apenas espaço ao invés disso.*/
+    text-indent: 30px;
+    line-height: 2em;/*line-height é representa a altura da linha, ou seja, usado para definir o espaçamento entre linhas. Quando se coloca 1em, significa que a altura da linha coincide com o tamanho do corpo da fonte, sendo assim, o espaçamento é o mínimo.*/
+    margin: 15px 0px;
+}
+h1#princ{
+    font-family: 'idroid', sans-serif;
+    color: var(--mdnClr);
+    text-align: left;
+    font-size: 1.5em;
+    padding: 5px 0px 5px 5px;
+    margin: 15px 5px;
+}
+h2{
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+    font-family: var(--fntMn);
+    font-size: 1em;
+    color: white;
+    width: 100%;
+}
+h2.sub{
+    display: inline-block;
+    padding: 10px 0px 10px 30px;
+    width: 90%;
+    color: var(--mdnClr);
+    font-family: idroid, sans-serif;
+    font-size: 1.5em;
+    text-align: left;
+    background-image: linear-gradient(to right, var(--smthGdl), var(--smthGddk));
+}
+p{
+    margin-bottom: 0px;
+    font-family: var(--fntMn);
+}
+a.mn_txt{
+    color: var(--mdnClr);
+    font-family: var(--fntMn);
+    font-weight: 700;
+    text-decoration: none;
+}
+a.mn_txt:hover{
+    color: var(--lghtClr);
+}
+a.mn_txt::after{
+    content: '\00A0\1F517';
+    font-size: .9em;
+    font-weight: 400;
+}
+span.dest{
+    font-weight: 700;
+    color: var(--mdnClr);
+}
+span{
+    color: white;
+    font-weight: 700;
+}
+img{
+    width: 100%;
+}
+.bd{
+    max-width: 350px;
+    margin: auto;
+    display: block;
+}
+div.vid{
+    background-color: var(--mdnClr);
+    padding: 20px;
+    display: flex;
+    margin: 0px -20px;
+    position: relative;
+    padding-bottom: 57%;/*esse padding serve para "forçar" o video a ficar dentro das dimensões desejada para certo tipo de tamanho de tela*/
+}
+.vid > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    /*top e left são atributos próprios de position:absolute. Eles são similares ao margin.*/
+    /*margin: 10px auto 10px auto;
+    /*width: 100%;*/
+    /*height: 100%;
+    max-width: 900px;*/
+}
+aside#extra{
+    background-color: var(--lghtClrPMax);
+    border-radius: 20px;
+    padding:  0px 15px 15px 15px;
+    
+}
+h2#ext_titl{
+    background-color: var(--mdnClr);
+    /*width: 100%;*/
+    max-width: 900px;
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px 0px 10px 30px;
+    text-align: left;
+    margin-left: -15px;
+}
+aside > ul{
+    list-style-position: inside;
+    columns: 2;
+    list-style-type: '\2714\00A0';/*aqui o primeiro código unicode é um caractere especial. para inseri-los na css é necessário colocar seus respectivos valores depois de uma contrabarra. 00A0 é o NBSP(Non-breaking space), é um código de uma entidade HTML para espaçamento inserido após o valor do caractere especial.*/
+}
+li > abbr{
+    /*list-style-type: '🖙';*/
+    font-weight: 400;
+    font-size: 1.3em;
+    text-decoration: none;
+    /*display: inline-flex;*/
+}
+/*ul#esq_list > li{
+    margin: 40px;
+}
+/*ul#dir_list > li{
+    
+}*/
+footer{
+    color: white;
+    background-color: var(--drkClr);
+    font-family: var(--fntMn);
+    /*width: 100%;*/
+    /*min-width: 100px;
+    max-width: 900px;*/
+}
+footer > p{
+    padding: 5px 0px 5px 20px;
+    text-align: center;
+    font-size: .8em;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <style>
+        h1{
+            /*border-image: é um parâmetro de preenchimento onde é possível personalizar o estilo de borda com algum tipo de imagem específica.*/
+            border: 10px solid black;/*Inicialmente, sempre quando for utilizar um parâmetro border-image, é necessário que haja uma borda preenchida predefinida, pois suas dimensões e padrões servirão de referência para o comportamento de border-image. Atente-se ao usar essas predefinições de borda, pois nem todos os navegadores são compatíveis ao border-image. Nesse caso, você pode optar por deixar a cor como "transparent" ou com uma cor relativa a imagem da borda que escolheu.*/
+            padding: 10px;
+            border-image-source: url('bordas.png');
+            border-image-slice: 25;/*Esse parâmetro não é uma unidade de medida padrão, e sim um valor admensional que serve para ajustar a forma que a imagem irá se comportar no preenchimento da borda, de modo a fatiá-la e adaptála as dimensões do objeto especificado.*/
+            border-image-repeat: round;/*Esse parâmetro serve para especificar um comportamento do tipo "array", podendo ser uma repetição simples (repeat), ou uma repetição distorcida (stretch). Há também o round, que funciona de forma similar ao repeat, porém redimencionando o tiling da imagem de acordo com seu tamanho. */
+            /*shorthand: border-image: source (url) slice repeat;*/
+        }
+    </style>
+    <title>Bordas Personalizadas</title>
+</head>
+<body>
+    <h1>Teste de bordas</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quod earum temporibus natus eligendi labore doloribus architecto. Commodi cumque vitae quo similique dignissimos. Fuga eos, neque veniam nemo repellendus odit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, voluptatibus repellendus numquam ex iure autem, quidem omnis voluptatum quibusdam consequuntur laudantium natus unde quae voluptate sit! Explicabo, fugiat nostrum. Nam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod hic veritatis consequatur quo ullam sit in adipisci perferendis, architecto, eveniet necessitatibus minima quidem! Amet alias asperiores sequi, error quaerat assumenda. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil soluta dolor ipsam aliquid natus vitae. Dicta error nam commodi eius possimus tempora, quo asperiores reiciendis, neque nostrum libero atque. Saepe! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cumque, illum accusamus nihil in architecto assumenda nam, obcaecati nobis dolorem quas perspiciatis eaque quos labore minima libero fuga, reprehenderit porro!</p>
+</body>
+</html>

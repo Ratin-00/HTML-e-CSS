@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: lightslategrey;
+        }
+        header{
+            background-color: cornsilk;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav{
+            background-color: rgb(156, 149, 141);
+            color: black;
+            padding: 1px;
+            box-shadow: 1px 1px 1px rgb(0, 0, 0);/*Parâmetros: deslocamento horizontal, deslocamento vertical, espalhamento e cor da sombra*/
+
+        }
+        nav > a{
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: darkgreen;
+            margin-right: 2px;
+
+        }
+        nav > a:hover{
+            text-decoration: underline;
+            box-shadow: inset 2px 1px 5px rgb(0, 0, 0);
+        }
+        a{
+            box-shadow: inset 0px -3px 0px rgb(71, 68, 64);
+            outline: 1px solid rgb(214, 214, 206);
+        }
+        main{
+            background-color: rgb(201, 201, 201);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 0px 15px 0px 15px;/*Shorthand: border-radius: top-left top-right bottom right botton left - Outro método: border-radius: top bottom*/
+            box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.733);
+        }
+        article{
+            background-color: rgb(223, 228, 233);
+            padding: 5px;
+        }
+        article > aside{
+            background-color: dimgray;
+            text-align: right;
+        }
+        aside > p{
+            padding: 5px;
+        }
+        footer{
+            background-color: black;
+            color: beige;
+            text-align: center;
+            padding: 1px;
+            margin: 0px;
+        }
+        div#circ{
+            margin: 10px auto 10px auto;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;/*Outra forma de trabalhar o border-radius, é utilizando porcentagem, relacionada às dimensões totais do objeto.*/
+            background-color: aliceblue;
+        }
+    </style>
+    <title>Grouping Tags</title>
+</head>
+<body>
+    <!--As grouping tags são tags desenvolvidas para HTML5 que auxilia na prática SEO, de modo que os navegadores conseguem localizar o conteúdo de maior relevância de sua página com maior facilidade. Basicamente, as seguintes tags não possuem grandes diferenças de comportamento em relação às div, que são do mesmo grupo (box-level), mas são muito importantes para se manter uma hierarquia de conteúdo e uma boa implementação SEO.-->
+    <header>
+        <h1>Apresentação do Site</h1>
+        <nav><!--Bloco utilizado para organizar menus-->
+            <a href="#">Link do Menu 1</a>
+            <a href="#">Link do Menu 2</a>
+            <a href="#">Link do Menu 3</a>
+            <a href="#">Link do Menu 4</a>
+            <a href="#">Link do Menu 5</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Bati a cabeça Vinte Centavos Coxinha com molho tártaro</p>
+        </section>
+        <section id="notícias">
+            <article><!--Pode ser um artigo, texto de um blog, etc.-->
+                <h2>Sonafaro sobre o Brasal</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit debitis fugiat, quos reiciendis corrupti voluptate nulla ullam molestiae illum voluptas. Cupiditate corporis vel expedita voluptatem deserunt repudiandae culpa modi! Sit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quos nemo sed suscipit rerum nulla praesentium consectetur iure illo eius cumque quasi totam ipsum recusandae, deleniti consequatur, similique, magnam animi.</p>
+                <aside><!--Relativo a periférico. Ou Relacionado à...-->
+                    <p>Escrito por Edivaldo Pericleyton Rasta</p>
+                </aside>
+            </article>
+            <article>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, dolorem velit nulla odio esse eos! Dolore facilis, quasi maiores explicabo inventore architecto sequi. Dolor accusamus corrupti dicta, quis iure pariatur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quae, sed eos facere vel nihil quam molestiae cum quaerat temporibus hic? Cumque fugit, odio itaque voluptates facere natus deserunt porro? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ipsam quae at tempora. Sunt quod voluptatum neque tempora animi dolorum quia maiores a autem adipisci? Porro adipisci hic dolore beatae.</p>
+            </article>
+        </section>
+        <section id="receitas">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quo, iusto totam harum vitae perspiciatis fugiat impedit recusandae exercitationem sapiente laboriosam animi id. Quisquam sunt neque id. Possimus, debitis repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas molestiae natus enim est culpa a sed expedita minus libero ratione fugit optio, dolores incidunt quam ipsam, assumenda tempore numquam ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nemo fuga provident voluptatem beatae sunt nihil at repellendus odit mollitia magnam, possimus porro quia itaque? Mollitia quia unde nulla commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dicta consectetur, labore quas odio nostrum pariatur nobis voluptate doloremque modi facere unde dignissimos id obcaecati voluptatem exercitationem nesciunt laudantium iure? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aperiam, corrupti illo quia laudantium sequi asperiores maiores cupiditate soluta aliquid veritatis ex pariatur ab! Repellendus minima fugiat quibusdam non debitis.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Cebolas Alhos em Saltimbancos.<sup>&trade;</sup></p>
+    </footer>
+    <div id="circ">
+
+    </div>
+</body>
+</html>

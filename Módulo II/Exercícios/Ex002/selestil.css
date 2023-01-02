@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/*
+    HTML - "id" = CSS - "#"
+        Os identificadores são especificações restritas a apenas um elemento, segundo as normas da W3C. Quando há mais de um elemento, o correto é utilizar a classificação (class).
+    HTML - "class" = CSS - "."
+        As classes são utilizadas quando pretende-se agrupar uma série de elementos que obedecem a determinados atributos em CSS. 
+    Mas atenção ao escolher os nomes para suas id e class, sempre escolha nomes que remetam à funções, nunca características.
+*/
+body{
+    background-color: #5AC796;
+    padding: 35px;
+    border: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    color: #204736;
+}
+h1#principal{/*Não é necessário especificar o item pertencente a id (aqui, h1), porém, dependendo da ocasião, essa prática pode tornar estruturas mais complexas mais fáceis de ler. Note que o nome do item sempre deve seguir de seu identificador sem qualquer espaço.*/
+    font-style: italic;
+    text-align: center;
+    background-color: #4EAD83;
+}
+h2{
+    color: #3D8766;
+}
+.subcat{/*O mesmo conceito para id, mas como se trata de um class, já é subentendido que o que é especificado por esse bloco é relacionado a um grupo específico de elementos. Logo, basta digitar "." seguido do nome da classe.*/
+    font-weight: 600;
+    text-decoration: underline;
+}
+.estragada{
+    font-weight: bolder;
+    font-style: italic;
+    text-decoration: overline;
+}

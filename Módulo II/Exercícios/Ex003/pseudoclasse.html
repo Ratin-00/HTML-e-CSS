@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <style>
+        div{
+            display: inline-block;/*Organiza a forma em que os elementos serão distribuídos na página.*/
+            background-color: grey;
+            text-align: center;
+            border: 1px solid black;/*Shorthand para bordas de elementos. "border: largura tipo cor"*/
+            height: 200px;
+            width: 200px;
+        }
+        /*
+            pseudo classes ":" -> Elas são usadas para se relacionarem com um elemento ou uma classe, de acordo com seu estado (boolean).
+        */
+        div:hover{/*Primeiro exemplo: a pseudo classe hover altera o estado da div quando o mouse "flutua" sobre a mesma.*/
+            background-color: crimson;
+            cursor: pointer;
+        }
+        div:active{
+            background-color: blueviolet;
+            cursor: wait;
+        }
+        /*#d1{
+            background-color: cadetblue;
+        }
+        #d2{
+            background-color: darkolivegreen;
+        }
+        #d3{
+            background-color: greenyellow;
+        }*/
+    </style>
+    <title>Pseudo Classes</title>
+</head>
+<body>
+    <div id="d1">01</div><!--As divisões (div) são tags que servem para selecionar todo um espaço ocupado por um elemento, do início (lado extremo esquerdo) da página ao final (lado extremo direito) da página. Como há apenas 01 aqui, a tag div selecionará todo o tamanho que corresponde a 01 (Corpo da fonte, como visto em tipografia), do início ao fim.-->
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+</html>

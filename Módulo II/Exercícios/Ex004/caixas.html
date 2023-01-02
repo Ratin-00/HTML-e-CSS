@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <style>
+        h1{
+            background-color: darkgreen;
+            height: 300px;
+            width:300px;
+
+            /*border-width: 10px;
+            border-style: solid;
+            border-color: peru;*/
+            /*Shorthand:*/
+            border: 10px solid peru;
+
+            /*padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 5px;
+            padding-left: 7px;*/
+            /*Shorthand:*/
+            padding: 10px 5px 10px 7px;/*Caso as 4 dimensões forem valores iguais, basta informar apenas 1 valor. Caso os valores de um mesmo eixo ortogonal foram iguais, basta informar 2 valores (um valor correspondente ao eixo vertical, isto é, medida de topo e medida de base; e outro valor correspondente ao eixo horizontal, isto é, medida da esquerda e medida da direita).*/
+
+            /*É recomendável que se siga as configurações de tamanhhos no sentido horário.*/
+
+            /*margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            margin-left: 20px;*/
+            /*Shorthand:*/
+            /*margin: 20px 20px 40px 20px;*/
+            margin: 20px auto 40px auto;
+
+            /*Auto: Esse tipo de configuração de margem toma o elemento como se estivesse no centro horizontal da viewport (página). Para alterar o eixo vertical, basta especificar apenas o eixo horizontal como auto, como no exemplo acima.*/
+
+            /*O outline (contorno), fica situado em um ponto específico no interior da margem.*/
+
+            /*outline-width: 5px;
+            outline-style: dashed;
+            outline-color: crimson;*/
+            /*Shorthand:*/
+            outline: 5px dashed crimson;
+        }
+        a{
+            border-width: 10px;
+            border-style: solid;
+            border-color:darkblue;
+
+            padding-top: 5px;
+            padding-right: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+        }
+    </style>
+    <title>Trabalhando com Caixas</title>
+</head>
+<body>
+    <!--Box-Model: É o principal elemento do HTML e das CSS no que diz respeito ao aninhamento dos elementos numa página. Trata-se da organização padrão das páginas em formato de "caixas", agrupadas de forma que se assemelham a "molduras". Cada caixa corresponde a uma camada específica da página, a saber: margem (margin), borda (border), acolchoamento (padding) e conteúdo (content - com os seus atributos height e width).-->
+    <!--Estrutura das caixas:
+    Content: Qualquer elemento gráfico de uma página. 
+    Border: É um espaço que segue após o conteúdo. Pode ser caracterizado por uma linha.
+    Padding: É o ajuste que define o distanciamento interno, entre o conteúdo e sua borda.
+        Outline: É a camada onde é feito o contorno de um elemento. Situa-se imediatamente após a borda.
+    Margin: É o ajuste que define o distanciamento externo, entre a borda e outro elemento adjacente.-->
+    <!--Tipos de Caixas:
+        box-level: Essas caixas sempre se iniciam em uma linha nova, ocupam a largura total da página, podendo ser alterado apenas a sua altura. Após serem colocadas, os demais elementos seguem logo abaixo deste. Ex: A tag "div" é um tipo de elemento box-level.
+        inline-level: Esse tipo de caixa, como o nome já sugere, sempre se iniciam dentro de uma linha, não ocupam a largura total, podendo ser ajustado tanto na sua largura e altura, e não quebra a linha, sendo seguido pelo elemento imediatamente após na mesma linha. Ex: A tag "span" é um tipo de elemento inline-level.
+
+        Outros exemplos:
+        box-level:                  inline-level:
+        <h1>-<h6>                   <a>
+        <p>                         <code>
+        <main>                      <small>
+        <header>                    <strong>
+        <nav>                       <em>
+        <article>                   <sup>-<sub>
+        <aside>                     <label>
+        <footer>                    <button>
+        <form>                      <input>
+        <video>                     <select>
+    -->
+
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links</a> são do tipo inline-level.
+    </p>
+    <!--User agent - Acessando as ferramentas de desenvolvedor do chrome, na aba css existe uma estrutura CSS já pronta. Essa é a uma estrutura básica que o navegador utiliza para exibir os elementos em tela. Sempre que algum bloco na estrutura da página estiver com o nome user agent no cabeçalho, significa que aquele bloco foi gerado pelo próprio navegador.-->
+    <!--Função Display-
+    sempre que o Display estiver como block, o seu elemento será box-level. 
+    Já quando estiver como inline, será inline-level. 
+    Existe também o modo inline-block, que é quando o elemento segue todas as características de um elemento inline, porém contendo algumas propriedades de box-level(block), como configuração de altura e largura.-->
+
+</body>
+</html>
