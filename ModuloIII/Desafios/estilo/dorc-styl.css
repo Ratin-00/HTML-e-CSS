@@ -41,13 +41,28 @@ main{
     font-weight: 600;
     margin: 20px;
 }
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 1.5em;
+}
 section > p{
-    margin: 20px 20px;
+    margin: 2px 20px;
     text-align: left;
 }
-/*section{
-
-}*/
+section.nrm{
+    background-color: white;
+    color: black;
+}
+section.imag{
+    background-color: rgb(88, 88, 88);
+    color: white;
+    margin: 0px -20px;
+}
+section.imag > p{
+    background-color: rgb(70, 70, 70);
+    width: 400px;
+}
 p{
     text-align: center;
     font-weight: 600;
