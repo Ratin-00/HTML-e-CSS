@@ -4,9 +4,14 @@
     margin: 0px;
 }
 :root{
-    --mnFnt: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --mnFnt: 'SignikaNegative', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif/*'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif*/;
 }
-
+@font-face{
+    font-family: 'SignikaNegative';
+    src:url('../SignikaNegative-VariableFont_wght.ttf')format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
 html, body{
     font-family: var(--mnFnt);
     min-height: 100vh;/*altura mínima 100% da altura da viewport*/
@@ -16,7 +21,6 @@ header{
     color: white;
     text-align: center;
     padding: 20px;
-    font-weight: normal;
     /*font-family: ;*/
 }
 header > h1{
@@ -24,6 +28,7 @@ header > h1{
     /*text-transform: uppercase; text-transform é uma propriedade que pode se alterar alguns parâmetros de texto, como lowercase, uppercase e capitalize*/
     font-variant: small-caps;/*font-variant cria certas "deformações na fonte. small-caps por exemplo, mantém as medidas do corpo da fonte, no entanto, transforma as minúsculas na forma de maiúsculas."*/
     line-height: 1.4em;
+    font-size: 3vw;/*viewport width*/
 }
 header > p{
     padding-bottom: 50px;
@@ -61,7 +66,8 @@ section.imag{
 }
 section.imag > p{
     background-color: rgb(70, 70, 70);
-    width: 400px;
+    display: inline-block;
+    padding: 10px;
 }
 p{
     text-align: center;
