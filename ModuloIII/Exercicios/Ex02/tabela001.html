@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <style>
+        :root{
+            --nth-tent: "3n";
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 400px;
+            height: 400px;
+            border-collapse: collapse;/*por padrão, para as tabelas, as células (td) contém um espaço pequeno entre uma e outra. O atributo que dá esse efeito é o border-collapse. Por padrão ele vem como sepparate, o que ocasiona esse espaço característico. Para que esse espaço seja eliminado, basta mudar o valor para collapse.*/
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            vertical-align: top;/*Para td, existe a propriedade vertical-align que basicamente complementa o text-align, servindo para alinhamento no eixo vertical. No entanto, deve-se atentar para o valor de centro dessa propriedade que, diferente do text-align, que é center, para o vertical-align é middle.*/
+        }
+        td:hover{
+            cursor: pointer;
+            background-color: rgba(172, 127, 255, 0.5);
+            transition: .5s;
+        }
+        .lulj{
+            width: 400px;
+            height: 40px;
+            margin-top: 50px;
+        }
+        .lulj > td{
+            text-align: center;
+        }
+        .lulj > thead, tfoot{
+            background-color: darkcyan;
+        }
+        caption{
+            border: 2px solid black;
+            font-size: 1.5em;
+            padding: 10px;
+            background-color: cadetblue;
+            font-weight: 600;
+            font-variant: small-caps;
+        }
+        .lulj > tbody > tr:nth-child(2n){/*nth-child é uma pseudoclasse que seleciona os tr que são filhos de tbody que sejam de dois em dois (2n). Outra forma serio ou colocar a palavra "odd"(ímpar) ou "even" (par). Os parâmetros de nth-child também aceita expressões aritméticas*/
+            background-color: gainsboro;
+        }
+        .lulj > tbody > td:hover{
+            background-color: rgba(172, 127, 255, 0.5);
+            transition: .5s;
+            cursor: pointer;
+        }
+        .lulj{
+            position: relative;
+
+        }
+        .lulj > thead > tr > th{
+            position: sticky;
+            top: 0px;/*o position: sticky faz com que o elemento fique "colado" em uma região. No entanto, é necessário que ele tenha alguma referência para qual região ele será colado. Nesse caso, como queremos que ele fique colado na rolagem vertical ao topo, colocamos top: 0px.*/
+            background-color: darkcyan;
+            border: 1px solid black;
+        } 
+    </style>
+    <title>Testando tabela html</title>
+</head>
+<body>
+    <h1>Tabela</h1>
+    <!--Hierarquia e anatomia de tabelas - tags:
+    table - <table>
+        caption - <caption> - Título da tabela
+        table head - <thead>
+            table row - <tr>
+                table header - <th>
+                table data - <td>
+        table body - <tbody>
+            table row - <tr>
+                table header - <th>
+                table data - <td>
+        table footer - <tfoot>
+            table row - <tr>
+                table header - <th>
+                table data - <td>
+        sobre o footer: Independente da posição que o <tfoot> for inserido dentro do corpo de <table>, o navegador sempre irá inserí-lo na parte inferior da tabela.
+    -->
+    <table>
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+    </table>
+    <table class="lulj">
+        <caption>Quitanda do Carlin</caption>
+        <thead>
+            <tr>
+                <th scope= "col">Código</th>
+                <th socpe= "col">Nome</th>
+                <th scope= "col">Produto</th>
+                <!--O scope serve para determinar algumas características de uma parte de uma tabela, como coluna, grupo de colunas, grupo de linhas, etc. Ele é útil para definir referências para a estrutura funcional da tabela, podendo ser lido por um algoritmo em JS, ou para uxiliar mecanismos de buscas, por exemplo.-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mariazinha</td>
+                <td>Goiabinha</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pedro</td>
+                <td>Pastel</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jorge</td>
+                <td>Rizolli</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Fernando</td>
+                <td>Queijo</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Mariana</td>
+                <td>Coco</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Estevão</td>
+                <td>Macarrão</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Estevão</td>
+                <td>Macarrão</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Estevão</td>
+                <td>Macarrão</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Estevão</td>
+                <td>Macarrão</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Estevão</td>
+                <td>Macarrão</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Estevão</td>
+                <td>Macarrão</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Estevão</td>
+                <td>Macarrão</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <!--O th não necessariamente é uma tag exclusiva para colunas, ela pode indicar uma referência para linhas ou grupos também, como visto no exemplo abaixo.-->
+                <th scope="row">Fluxo</th>
+                <td>6 pessoas</td>
+                <td>6 produtos</td>
+            </tr>
+        </tfoot>
+    </table>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic alias, nostrum enim dolorum perferendis molestias ad quis fugiat accusantium debitis, unde modi maiores accusamus, magni delectus cum neque animi? Facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum architecto magni perspiciatis commodi rem, iste neque, fugiat aliquam expedita asperiores quibusdam molestias cumque vel similique sed beatae, quas esse accusamus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, quas voluptates deserunt aliquam natus voluptatibus laborum eius temporibus dignissimos aut maiores veritatis? Obcaecati possimus neque aut eaque accusantium vero atque! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorem reiciendis quidem quia ipsam nihil, deserunt temporibus. Veniam amet saepe sequi dolorum hic itaque veritatis consectetur sunt nihil tempore. Vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam explicabo amet, porro modi, odio accusamus tempora omnis autem voluptatum ipsum dolor saepe eaque labore ex esse. Vero commodi unde earum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, praesentium nesciunt? Dolore sint ex fugiat nostrum, error similique placeat. Totam possimus quos incidunt et, alias dolorum necessitatibus excepturi? Enim, iusto! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nihil in illo eligendi quasi, est cupiditate perferendis nesciunt, quis autem reprehenderit ratione sapiente nostrum, eum qui. Eveniet nulla quia eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure recusandae, sunt dolore aliquam molestiae, iusto praesentium porro, atque est consequatur dicta odio magnam ipsum. Dolorem eius dolore molestiae delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum hic saepe, voluptate natus ab fugiat delectus facere sapiente. Culpa officiis, accusamus laudantium cumque maxime enim soluta esse consectetur exercitationem nostrum!
+    </p>
+</body>
+</html>
