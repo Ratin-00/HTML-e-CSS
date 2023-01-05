@@ -64,6 +64,11 @@
             top: 0px;/*o position: sticky faz com que o elemento fique "colado" em uma região. No entanto, é necessário que ele tenha alguma referência para qual região ele será colado. Nesse caso, como queremos que ele fique colado na rolagem vertical ao topo, colocamos top: 0px.*/
             background-color: darkcyan;
             border: 1px solid black;
+        }
+        .bigOver{
+            overflow-x: auto;
+            /*o parâmetro overflow (vazamento) serve para definir a rolagem de um conteúdo. y para rolagem vertical, e x para horizontal. Quanto aos valores há o auto, onde a rolagem segue o tamanho do conteúdo. Scroll, que independente do tamanho do conteúdo, exibirá uma barra de rolagem, hidden, que não irá exibir qualquer barra de rolagem, aenas clippando a imagem, e visible que é o valor padrão, que irá exibir todo o conteúdo, deixando a rolagem a cabo da página.
+            Esse parâmetro é utilizado para restringir um conteúdo a um espaço mínimo (como em conteúdos responsivos, por exemplo). Para aplicá-lo, pode-se adicionar um "container" (div) auxiliar, como nesse exemplo feito.*/
         } 
     </style>
     <title>Testando tabela html</title>
@@ -290,5 +295,162 @@
             </tr>
         </tbody>
     </table>
+    <br/>
+    <div class="bigOver">
+        <table style="width: 1100px;">
+            <thead>
+                <th>Produto</th>
+                <th>Jan</th>
+                <th>Fev</th>
+                <th>Mar</th>
+                <th>Abr</th>
+                <th>Mai</th>
+                <th>Jun</th>
+                <th>Jul</th>
+                <th>Ago</th>
+                <th>Set</th>
+                <th>Out</th>
+                <th>Nov</th>
+                <th>Dez</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Smart Tv</th>
+                    <td>23</td>
+                    <td>34</td>
+                    <td>54</td>
+                    <td>23</td>
+                    <td>5</td>
+                    <td>78</td>
+                    <td>65</td>
+                    <td>35</td>
+                    <td>52</td>
+                    <td>79</td>
+                    <td>45</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <th>Smart Tv</th>
+                    <td>23</td>
+                    <td>34</td>
+                    <td>54</td>
+                    <td>23</td>
+                    <td>5</td>
+                    <td>78</td>
+                    <td>65</td>
+                    <td>35</td>
+                    <td>52</td>
+                    <td>79</td>
+                    <td>45</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <th>Smart Tv</th>
+                    <td>23</td>
+                    <td>34</td>
+                    <td>54</td>
+                    <td>23</td>
+                    <td>5</td>
+                    <td>78</td>
+                    <td>65</td>
+                    <td>35</td>
+                    <td>52</td>
+                    <td>79</td>
+                    <td>45</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <th>Smart Tv</th>
+                    <td>23</td>
+                    <td>34</td>
+                    <td>54</td>
+                    <td>23</td>
+                    <td>5</td>
+                    <td>78</td>
+                    <td>65</td>
+                    <td>35</td>
+                    <td>52</td>
+                    <td>79</td>
+                    <td>45</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <th>Smart Tv</th>
+                    <td>23</td>
+                    <td>34</td>
+                    <td>54</td>
+                    <td>23</td>
+                    <td>5</td>
+                    <td>78</td>
+                    <td>65</td>
+                    <td>35</td>
+                    <td>52</td>
+                    <td>79</td>
+                    <td>45</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <th>Smart Tv</th>
+                    <td>23</td>
+                    <td>34</td>
+                    <td>54</td>
+                    <td>23</td>
+                    <td>5</td>
+                    <td>78</td>
+                    <td>65</td>
+                    <td>35</td>
+                    <td>52</td>
+                    <td>79</td>
+                    <td>45</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <th>Smart Tv</th>
+                    <td>23</td>
+                    <td>34</td>
+                    <td>54</td>
+                    <td>23</td>
+                    <td>5</td>
+                    <td>78</td>
+                    <td>65</td>
+                    <td>35</td>
+                    <td>52</td>
+                    <td>79</td>
+                    <td>45</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <th>Smart Tv</th>
+                    <td>23</td>
+                    <td>34</td>
+                    <td>54</td>
+                    <td>23</td>
+                    <td>5</td>
+                    <td>78</td>
+                    <td>65</td>
+                    <td>35</td>
+                    <td>52</td>
+                    <td>79</td>
+                    <td>45</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <th>Smart Tv</th>
+                    <td>23</td>
+                    <td>34</td>
+                    <td>54</td>
+                    <td>23</td>
+                    <td>5</td>
+                    <td>78</td>
+                    <td>65</td>
+                    <td>35</td>
+                    <td>52</td>
+                    <td>79</td>
+                    <td>45</td>
+                    <td>78</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
