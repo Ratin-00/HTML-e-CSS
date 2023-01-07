@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+}
+:root{
+    --mnFnt: 'SignikaNegative', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif/*'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif*/;
+}
+@font-face{
+    font-family: 'SignikaNegative';
+    src:url('../SignikaNegative-VariableFont_wght.ttf')format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+html, body{
+    font-family: var(--mnFnt);
+    min-height: 100vh;/*altura mínima 100% da altura da viewport*/
+}
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    /*font-family: ;*/
+}
+header > h1{
+    padding-top: 50px;
+    /*text-transform: uppercase; text-transform é uma propriedade que pode se alterar alguns parâmetros de texto, como lowercase, uppercase e capitalize*/
+    font-variant: small-caps;/*font-variant cria certas "deformações na fonte. small-caps por exemplo, mantém as medidas do corpo da fonte, no entanto, transforma as minúsculas na forma de maiúsculas."*/
+    line-height: 1.4em;
+    font-size: 3vw;/*viewport width*/
+}
+header > p{
+    padding-bottom: 50px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: .5s;
+    font-weight: bolder;
+}
+a:hover{
+    color: grey;
+}
+main{
+    font-weight: 600;
+    margin: 20px;
+}
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 1.5em;
+}
+section > p{
+    margin: 2px 20px;
+    text-align: left;
+}
+section.nrm{
+    background-color: white;
+    color: black;
+}
+section.imag{
+    /*background-color: rgb(88, 88, 88);*/
+    color: white;
+    margin: 0px -20px;
+    box-shadow: inset 0px 2px 2px black;
+    /*background-image: url('../imagens/background001.jpg');*/
+    background: rgb(88, 88, 88) url('../imagens/background001.jpg') center right no-repeat fixed;
+    background-size: cover;
+}
+section#imag2{
+    background-image: url('../imagens/background002.jpg');
+}
+section.imag > p{
+    background-color: rgba(70, 70, 70, 0.678);
+    display: inline-block;
+    padding: 10px;
+    text-shadow: 1px 1px 0px black;
+}
+section.nrm > p{
+    padding-bottom: 20px;
+}
+p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 2vw;
+    line-height: 1.8em;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 8px;
+}
