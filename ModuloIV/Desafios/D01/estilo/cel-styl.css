@@ -39,6 +39,10 @@ iframe#scrn{
     top: 80px;
     left: 22px;
 }
+iframe#scrn:hover{
+    cursor: url('../cursor-mob.png'), auto;
+}
+
 .sd-pan{
     display: flex;
     flex-direction: column;

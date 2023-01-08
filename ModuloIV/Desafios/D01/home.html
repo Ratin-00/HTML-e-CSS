@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener("mousemove", event => {
+        document.getElementsByClassName("cursor")[0].style.transform = "translate(" + (event.pageX) + "px, " + (event.pageY) + "px)";
+        })
+
+        document.addEventListener("click", event => {
+        document.getElementsByClassName("cursor")[0].classList.add("click")
+        setTimeout(() => {
+            document.getElementsByClassName("cursor")[0].classList.remove("click")
+        }, 250)
+        })
+    </script>
     <title>Home</title>
 </head>
 <style>
@@ -16,10 +28,29 @@
         height: 100vh;
         background: rgb(0,0,0) url('pacote-d013/imagens/tela-home.jpg') no-repeat top center;
         background-size: cover;
-
+        cursor: url('cursor-mob.png'), auto;
+    }
+    .cursor {
+        width: 0px;
+        height: 0px;
+        border-radius: 50%;
+        background-color: grey;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        opacity: 1;
+        transition: all 0s;
+    }
+    .cursor.click {
+        width: 60px;
+        height: 60px;
+        left: -12.5px;
+        top: -12.5px;
+        opacity: 0;
+        transition: width 0.25s, height 0.25s, left 0.25s, top 0.25s, opacity 0.25s;
     }
 </style>
 <body>
-    
+    <div class="cursor"></div>
 </body>
 </html>
