@@ -52,14 +52,18 @@ section.sd-pan img{
     margin: 10px;
     border-radius: 50%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.911);
+    transition: transform .5s;/*para utilizar o parâmetro "transition", é sempre importante considerar qual função ou parâmetro ele irá iniciar, pois caso contrário, por padrão, ele considerará todas as alterações de parâmetros como referência (Ex: tomando esse elemento como referência, caso transform não fosse especificado, todos os parâmetros seriam considerados, como o width, o margin, etc). Outro fator importante é observar o que se deseja acionar. Tomemos a pseudoclasse hover da imagem. Caso se deseje uma transição suave, tanto para entrada e saída do mouse, esse parâmetro deve ser especificado no seu elemento de origem, e não em sua pseudoclasse, pois se não o transition só será acionado caso a pseudoclasse fosse antes do mesmo. (ordem de precedência)*/
 }
 section.sd-pan img:hover{
     box-shadow: 0px 0px 5px 2px rgb(41, 146, 115),
     0px 0px 5px 2px rgb(41, 134, 146); 
     transform: translateX(-5px);
-    transition: .5s;
 }
-
+/*section.sd-pan img:hover::before{
+    transform: translateX(5px);
+    transition: .5s;
+    z-index: -1;
+}*/
 section.sd-pan a:active{
     transform: scale(0.8);
     transition: .5s;
