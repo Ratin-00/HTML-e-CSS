@@ -20,7 +20,7 @@
     <form action="cadstr.php" autocomplete="off" method="post"><!--autocomplete é um parâmetro para formulários que permite o dropbox com sugestões do navegador com termos inseridos anteriormente.--><!--o method é o padrão para tratamento de dados, importante para os scripts php. Ppor padrão ele tem valor get.--><!--É importante que se tenha uma diferenciação para uso dos métodos, como no caso para o get para dados não sensíveis (como nome, peso, idade, etc) e post para dados mais valiosos (senha, numero de cartão, cpf, etc). Outro fator para o get é que ele permite dados compartilháveis. Além disso, o get tem uma limitação de dados de 3 mil bytes, portanto isso também deve ser levado em consideração. Com isso, o post também é indicado para envio de arquivos.-->
         <div>
             <label for="Jq_nom">Nome:</label>
-            <input type="text" name="nom" id="Jq_nom" required minlength="3" maxlength="15" size="10" placeholder="nome do usuário">
+            <input type="text" name="nom" id="Jq_nom" required minlength="3" maxlength="15" size="15" placeholder="Nome do usuário">
         </div>
         <div>
             <label for="Jq_sobn">Sobrenome:</label>
