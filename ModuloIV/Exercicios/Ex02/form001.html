@@ -60,5 +60,19 @@
             <input type="time" name="temp" id="itemp">
         </p>
     </form>
+    <br/><hr>
+    <h1>Quarto exemplo</h1>
+    <form action="cadastro.php" method="get">
+        <p>
+            <label for="imail">Email</label>
+            <input type="email" name="email" id="imail">
+            <label for="itel">Telefone</label>
+            <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4, 5}-\d{4}$" required><!--O input do tipo tel possibilita aos dispositivos móveis de acessar a lista de contatos do aparelho, além de outras funcionalidades em autocomplete, personalizando a forma de preenchimento do campo.
+            O ^$ é um sinal de inserção de expressões regulares. O pattern ossibilita inseri-los. Exemplos de RegEx: \d - inserção de dígitos numéricos, [0-9] - campo de valores possíveis (zero á nove), {4} - quantidade de dígitos (entre chaves)-->
+            <!--Estudar RegEx (expressões regulares)-->
+        </p>
+        <input type="reset" value="Limpar">
+        <input type="submit" name="Enviar" id="ienv">
+    </form>
 </body>
 </html>
