@@ -20,7 +20,7 @@
     <form action="cadstr.php" autocomplete="off" method="post"><!--autocomplete é um parâmetro para formulários que permite o dropbox com sugestões do navegador com termos inseridos anteriormente.--><!--o method é o padrão para tratamento de dados, importante para os scripts php. Ppor padrão ele tem valor get.--><!--É importante que se tenha uma diferenciação para uso dos métodos, como no caso para o get para dados não sensíveis (como nome, peso, idade, etc) e post para dados mais valiosos (senha, numero de cartão, cpf, etc). Outro fator para o get é que ele permite dados compartilháveis. Além disso, o get tem uma limitação de dados de 3 mil bytes, portanto isso também deve ser levado em consideração. Com isso, o post também é indicado para envio de arquivos.-->
         <div>
             <label for="Jq_nom">Nome:</label>
-            <input type="text" name="nom" id="Jq_nom" required minlength="3" maxlength="15" size="15" placeholder="Nome do usuário">
+            <input type="text" name="nom" id="Jq_nom" required minlength="3" maxlength="15" size="15.." placeholder="Nome do usuário">
         </div>
         <div>
             <label for="Jq_sobn">Sobrenome:</label>
@@ -32,6 +32,7 @@
         </div>
         <input type="submit" value="Cadastrar">
         <input type="reset" value="Limpar">
+        <!--O tipo "reset" de input é um parâmetro pronto para limpar formulários-->
     </form>
     <hr>
     <br/>
@@ -39,6 +40,25 @@
         <label for="Jq_nm">Nome:</label>
         <input type="text" name="nom" id="Jq_nm" required maxlength="30" placeholder="Nome completo" autocomplete="name">
     </form>
-
+    <br/>
+    <h1>Outro Formulário</h1>
+    <form action= "cadastro.php" method= "get" autocomplete= "on">
+        <p>
+            <label for= "inom">Nome</label>
+            <input type= "text" name= "nom" id= "inom" required maxlength= "30" placeholder= "Nome completo" autocomplete= "name">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        <p>
+            <label for="imed">Média</label>
+            <input type="number" name="med" id="imed" min="0" max="10" step="0.1" value="0"><!--Existem vários tipos de inputs, um deles é o tipo number, que possibilita inserção de números, além de habilitar automaticamente setas de incremento e decremento. Esse tipo de campo apenas aceita números ou valor nulo(----). Outra vantagem de utilizar este tipo de campo é a possibilidade de estabelecer, pelo próprio html, valores limites mínimos e máximos. O atributo step possibilita a inserção de valores fracionados, dependendo do valor que se deseja(ex: 0.1 - de um em um décimo, 0.5 - de cinco em cinco décimos).-->
+            <label for="imes">Período</label>
+            <input type="month" name="mes" id="imes"><!--O input do tipo month é um dos tipos de data que habilita a inserção de datas com um calendário incluso.-->
+            <label for="idat">Dia da prova</label>
+            <input type="date" name="dat" id="idat">
+            <label for="itemp">Horário</label>
+            <input type="time" name="temp" id="itemp">
+        </p>
+    </form>
 </body>
 </html>
