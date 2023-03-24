@@ -111,5 +111,71 @@
             <input type="reset" value="Limpar">
         </p>
     </form>
+    <br/><hr>
+    <h1>Sétimo exemplo</h1>
+    <form action="cadastro.php" method="post">
+        <p>"Combo box"</p>
+        <p>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest">
+                <optgroup label="Região Sudeste">
+                    <option value="sp">São Paulo</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="es">Espírito Santo</option>
+                </optgroup>
+                <optgroup label="Região Sul">
+                    <option value="pr">Paraná</option>
+                    <option value="sc">Santa Catarina</option>
+                    <option value="rs">Rio Grande do Sul</option>
+                </optgroup>
+                <optgroup label="Região Centro-Oeste">
+                    <option value="mt">Mato Grosso</option>
+                    <option value="ms">Mato Grosso do Sul</option>
+                    <option value="go">Goiás</option>
+                    <option value="df">Distríto Federal</option>
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="pi">Piauí</option>
+                    <option value="pe">Pernambuco</option>
+                    <option value="se">Sergipe</option>
+                    <option value="ba">Bahia</option>
+                    <option value="ce">Ceará</option>
+                    <option value="rn">Rio Grande do Norte</option>
+                    <option value="pb">Paraíba</option>
+                    <option value="al">Alagoas</option>
+                    <option value="ma">Maranhão</option>
+                </optgroup>
+                <optgroup label="Região Norte">
+                    <option value="mp">Amapá</option>
+                    <option value="to">Tocantins</option>
+                    <option value="pa">Pará</option>
+                    <option value="ro">Rondônia</option>
+                    <option value="am">Amazonas</option>
+                    <option value="rr">Roraima</option>
+                    <option value="ac">Acre</option>
+                </optgroup>
+            </select>
+            <p>
+                <label for="iprof">Profissão</label>
+                <input type="text" name="prof" id="iprof" list="lstprof">
+                <datalist id="lstprof">
+                    <option value="adm">Administrador</option>
+                    <option value="cont">Contador</option>
+                    <option value="eng">Engenheiro</option>
+                    <option value="emp">Empresário</option>
+                    <option value="fx">Faxineiro</option>
+                </datalist>
+            </p>
+        </p>
+        <p>
+            <label for="imsg">Mensagem:</label>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
 </body>
 </html>
