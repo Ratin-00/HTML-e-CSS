@@ -13,6 +13,14 @@
             margin: 20px 10px;
         }
     </style>
+    <script>
+    //    document.onload = function(){
+        function calcIdd(){
+            let atl = new Date().getFullYear()
+            idd.innerHTML = Number(atl) - Number(iano.value)
+        }
+    //}
+    </script>
     <title>Teste de Formulários</title>
 </head>
 <body>
@@ -177,5 +185,39 @@
             <input type="reset" value="Limpar">
         </p>
     </form>
+    <br/><hr>
+    <h1>Outputs</h1>
+    <form action="cadastro.php" method="get">
+        <p>
+            <label for="in1">Número 1:</label>
+            <input type="number" name="num1" id="in1" min="0" max="50" required oninput="ires.innerHTML = Number(in1.value) + Number(in2.value)">
+            <label for="in2">Número 2:</label>
+            <input type="number" name="num2" id="in2" min="0" max="50" required oninput="ires.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <fieldset>
+            <legend>Resultado</legend>
+            <p>
+                <!--<label for="ires">Resultado</label>-->
+                <output name="res" id="ires">0</output>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        <p>
+            <input type="range" name="mod" id="imod" min="0" max="10" value="5" oninput="ival.innerHTML = Number(imod.value)">
+            <output id="ival">5</output>
+        </p>
+        <p>
+            <label for="iano">Ano de nascimento:</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2023" oninput="calcIdd()">
+        </p>
+        <fieldset>
+            <legend>Idade</legend>
+            <output id="idd">0</output>
+        </fieldset>
+    </form>
+    
 </body>
 </html>
