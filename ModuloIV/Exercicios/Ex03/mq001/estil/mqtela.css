@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/*estilo para tela*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+header{
+    background-color: rgb(84, 83, 90);
+    color: aliceblue;
+    padding-top: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+header > h1{
+    font-size: 2em;
+    margin-bottom: 13px;
+}
+menu ul{
+    list-style-type: none;
+    background-color: rgb(29, 29, 31);
+    width: 100%;
+}
+menu li{
+    display: inline-block;
+    padding: 12px;
+    background-color: rgb(18, 18, 19);
+    margin: 3px;
+    cursor: pointer;
+}
+menu li:hover{
+    mix-blend-mode:screen;
+    box-shadow: rgb(190, 190, 190);
+}
+article{
+    width: 600px;
+    margin: auto;
+    display: block;
+    text-align: justify;
+}
+article > h2{
+    margin-bottom: 8px;
+}
