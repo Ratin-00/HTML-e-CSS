@@ -1,5 +1,72 @@
 @charset "UTF-8";
 
 @media print {
-    
+    body{
+        /*background-image: url(../imagens/back-print.jpg); <- desnecessário*/
+        font-family: 'Courier New', Courier, monospace;
+    }
+    main{
+        border: 2px solid black;
+    }
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+    main::after{
+        content: 'Ipresso do site /user';
+        text-decoration: overline;
+        font-size: 1em;
+    }
+    img#iph{
+        display: none;
+    }
+    img#ipr{display: block;}
+}
+
+/*Typical Device breakpoints (Estudar)
+Pequenas telas: até 600px;
+Celular: de 600px até 768px;
+Tablet: de 768px até 992px;
+Desktop: de 992px até 1200px;
+Grandes telas: acima de 1200px;
+*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    img#iph{
+        display: none;
+    }
+    img#itb{
+        display: block;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#iph{
+        display: none;
+    }
+    img#itb{
+        display: none;
+    }
+    img#ipc{
+        display: block;
+    }
+}
+@media screen and (min-width: 1200px) {
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    img#iph{
+        display: none;
+    }
+    img#ipc{
+        display: none;
+    }
+    img#itv{
+        display: block;
+    }
 }
