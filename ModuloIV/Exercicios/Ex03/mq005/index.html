@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estil/mqestest.css">
+    <link rel="stylesheet" href="estil/mqestest.css" media="all">
+    <link rel="stylesheet" href="estil/mqpl.css">
     <script>
         function clickMenu(){
             if(mni.style.display == 'block'){
-                mni.style.display = 'none'
+                mni.style.display = 'none';
             }else{
-                mni.style.display = "block"
+                mni.style.display = "block";
+            }
+        }
+        function szChg(){
+            if(window.innerWidth >= 768){
+                mni.style.display = "block";
+            }else{
+                mni.style.display = "none";
             }
         }
     </script>
     <title>Media Queries</title>
 </head>
-<body>
+<body onresize="szChg()">
     <header>
         <h1>Site com menu responsivo</h1>
         <div id="icc" onclick="clickMenu()">
