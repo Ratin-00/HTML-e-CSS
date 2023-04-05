@@ -21,8 +21,9 @@ img.loge{
     height: 30px;
     width: 30px;
     display: inline-block;
-    margin-top: 9px;
-    margin-bottom: -9px;
+    margin-left: 7px;
+    margin-top: 4px;
+    margin-bottom: -4px;
 }
 section#logA{
     position: absolute;
@@ -51,11 +52,71 @@ section#logA > div#ifrm{
     padding: 10px;
     display: block;
 }
+div.fld > label{
+    display: none;
+}
+div.fld{
+    background-color: rgb(11, 59, 55);
+    border-radius: 5px;
+    margin-top: 3px;
+    display: block;
+    width: 100%;
+    height: 40px;
+}
+div.fld > input{
+    background-color: rgb(26, 114, 107);
+    font-size: 1em;
+    width: calc(100% - 44px);
+    height: 90%;
+    transform: translateY(-5px);
+    border: 0px;
+    border-radius: 5px;
+    padding: 4px;
+}
+div.fld > input:focus-within{
+    transition: .6s;
+    background-color: rgb(76, 204, 193);
+}
 div#ifrm > h1{
     text-align: center;
     margin-bottom: 10px;
-
 }
 div#ifrm{
     font-size: .8em;
+}
+form > div#lgbx > input[type=submit]{
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-image: linear-gradient(to bottom, rgb(26, 114, 107), rgb(11, 59, 55));
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    color: aliceblue;
+    font-weight: 600;
+    cursor: pointer;
+}
+form > div#lgbx > input[type=submit]:hover{
+    transition: .6s;
+    mix-blend-mode: hard-light;
+    box-shadow: 0px 0px 6px rgb(15, 88, 70);
+}
+form > div#lgbx > a.btn{
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, rgb(26, 114, 107), rgb(11, 59, 55));
+    border-radius: 5px;
+    color: aliceblue;
+}
+form > div#lgbx > a.btn:hover{
+    transition: .6s;
+    mix-blend-mode: hard-light;
+    box-shadow: 0px 0px 6px rgb(15, 88, 70);
 }
