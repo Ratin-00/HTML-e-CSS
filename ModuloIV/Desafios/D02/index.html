@@ -19,8 +19,19 @@
                 <p>
                     Bem vindo ao login. Insira usuário e senha.
                 </p>
-                <form action="login.php" method="post">
-
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="fld">
+                        <img src="imag/loge.png" class="loge" alt="login">
+                        <input type="email" name="logn" id="ilog" placeholder="Isira email" autocomplete="email" required maxlength="30">
+                        <label for="ilog">Login</label>
+                    </div>
+                    <div class="fld">
+                        <img src="imag/pswlog.png" class="loge" alt="pas">
+                        <input type="password" name="pas" id="ipsw" placeholder="Insira Senha" autocomplete="current-password" required minlength= "8" maxlength="20">
+                        <label for="ipsw">Senha</label>
+                    </div>
+                    <input type="submit" value="Entrar">
+                    <a href="esq.html">Esqueci a senha</a>
                 </form>
             </div>
         </section>
