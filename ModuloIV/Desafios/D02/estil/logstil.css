@@ -24,6 +24,7 @@ img.loge{
     margin-left: 7px;
     margin-top: 4px;
     margin-bottom: -4px;
+    mix-blend-mode: plus-lighter;
 }
 section#logA{
     position: absolute;
@@ -54,7 +55,18 @@ section#logA > div#ifrm{
 }
 div.fld > label{
     display: none;
+    /*position: absolute;
+    left: 60px;
+    color: aliceblue;
+    margin-top: 5px;
+    font-weight: 400;
+    cursor: text;*/
 }
+/*div.fld > label:active{
+    transition: .6s;
+    /*font-size: .3em;
+    transform: translateY(-8px);
+}*/
 div.fld{
     background-color: rgb(11, 59, 55);
     border-radius: 5px;
@@ -122,4 +134,13 @@ form > div#lgbx > a.btn:hover{
 }
 p{
     margin: 10px 15px;
+}
+form > div.fld > input::placeholder{
+    color: rgb(227, 241, 241);
+    font-weight: 500;
+}
+form > div.fld > input:focus::placeholder{
+    transition: .6s;
+    font-size: .7em;
+    transform: translate(4px, -12px);
 }
